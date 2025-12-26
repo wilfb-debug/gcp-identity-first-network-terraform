@@ -26,6 +26,9 @@ This project separates identities by responsibility:
 This separation enforces least privilege and reduces blast radius.
 
 ## Terraform outputs (post-Apply)
-- private_subnet = "private-subnet"
-- public_subnet = "public-subnet"
-- vpc_name = "identity-net"
+
+```text
+private_subnet = "private-subnet"
+public_subnet  = "public-subnet"
+vpc_name       = "identity-net"
+
