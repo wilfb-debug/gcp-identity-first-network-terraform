@@ -16,7 +16,7 @@ provider "google" {
 
 resource "google_compute_network" "vpc" {
   name                    = "identity-net"
-  auto_create_subnetworks  = false
+  auto_create_subnetworks = false
 }
 
 resource "google_compute_subnetwork" "public" {
@@ -54,4 +54,16 @@ resource "google_compute_firewall" "allow_internal" {
   }
 
   source_ranges = ["10.10.0.0/16"]
+}
+resource "google_compute_firewall" "deny_all_ingress" {
+  name      = "deny-all-ingress"
+  network   = google_compute_network.vpc.name
+  direction = "INGRESS"
+  priority  = 1000
+
+  deny {
+    protocol = "all"
+  }
+
+  source_ranges = ["0.0.0.0/0"]
 }
