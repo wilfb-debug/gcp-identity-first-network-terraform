@@ -9,3 +9,6 @@ output "public_subnet" {
 output "private_subnet" {
   value = google_compute_subnetwork.private.name
 }
+output "terraform_provisioner_sa" {
+  value = google_service_account.terraform_provisioner.email
+}
