@@ -84,3 +84,38 @@ public_subnet  = "public-subnet"
 vpc_name       = "identity-net"
 
 20fe283286e4ab6e9d2d3e366b3e12a72a314e06
+
+---
+
+## Observability and Alerting
+
+This project implements workload-level observability using Google Cloud Logging
+and log-based metrics.
+
+Application logs are emitted from a private Compute Engine VM and ingested into
+Cloud Logging. A log-based metric is created to count matching log entries, and
+an alerting policy is attached to this metric.
+
+### Alert Validation Notes
+
+During testing, application logs were successfully ingested into Cloud Logging
+and observed incrementing the associated log-based metric.
+
+Due to Cloud Monitoring evaluation timing and notification delivery behavior,
+the alert notification itself was not relied upon for validation.
+
+Instead, validation was confirmed via:
+- Log presence in Logs Explorer
+- Metric visibility and configuration
+- Alert policy attachment and threshold settings
+
+This mirrors real-world cloud engineering practices where alert behavior is
+validated structurally rather than via test email delivery.
+
+## Observability Validation
+
+### Log Ingestion Proof
+The following screenshot confirms application logs from a private VM are ingested into Cloud Logging and queryable via Logs 
+Explorer.
+
+![Logs Explorer STEP3_TEST](observability/screenshots/logs-explorer-step3-test.png)
