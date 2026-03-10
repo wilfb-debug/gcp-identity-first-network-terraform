@@ -1,6 +1,12 @@
 HEAD
 # Identity-First Cloud Network (Terraform) + Observability
 
+# Identity-First Cloud Architecture with Terraform (GCP)
+
+![Identity-First Cloud Architecture](architecture/identity-first-architecture.png)
+
+This project demonstrates designing and deploying a secure, identity-first cloud architecture on Google Cloud Platform using Terraform.
+
 ## Project Scope (Identity-First Infrastructure)
 
 This project demonstrates an identity-first cloud architecture on Google Cloud
@@ -48,12 +54,6 @@ private VM and sets up alerting.
 - `architecture/` - architecture diagrams and write-ups
 - `observability/` - log filter, metric + alert notes
 - `screenshots/` - screenshots as proof/evidence
-
-# Identity-First Cloud Architecture with Terraform (GCP)
-
-![Identity-First Cloud Architecture](architecture/identity-first-architecture.png)
-
-This project demonstrates designing and deploying a secure, identity-first cloud architecture on Google Cloud Platform using Terraform.
 
 ## Key Concepts
 - Identity-first access using IAM and service accounts
