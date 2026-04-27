@@ -1,5 +1,11 @@
-HEAD
 # Identity-First Cloud Network (Terraform) + Observability
+
+![CI](https://github.com/wilfb-debug/gcp-identity-first-network-terraform/actions/workflows/ci.yml/badge.svg)
+![Terraform](https://img.shields.io/badge/Terraform-1.5-7B42BC?logo=terraform)
+![GCP](https://img.shields.io/badge/GCP-Identity%20%26%20Networking-4285F4?logo=google-cloud)
+![Security](https://img.shields.io/badge/security-tfsec%20scanned-blue)
+![tflint](https://img.shields.io/badge/lint-tflint%20passing-brightgreen)
+
 
 # Identity-First Cloud Architecture with Terraform (GCP)
 
